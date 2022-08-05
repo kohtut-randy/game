@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, #ffe600, #ff7b01);
+    cursor: pointer;
 }
 
 .container {
@@ -53,7 +54,52 @@ body {
 
 .left__circle i, .right__circle i {
     font-size: 16px;
-    color: red;
+    color: rgb(253, 38, 38);
+    animation: animate 4s ease infinite;
+}
+
+@keyframes animate{
+    0%{
+        color: rgb(253, 38, 38);
+    }
+    45%{
+        color: rgb(253, 38, 38);
+    }
+    70%{
+        color: greenyellow;
+    }
+    100%{
+        color: greenyellow;
+    }
+}
+
+.left__circle i:nth-child(1),
+.right__circle i:nth-child(1){
+    animation-delay: 0s;
+}
+.left__circle i:nth-child(2),
+.right__circle i:nth-child(2){
+    animation-delay: 0.3s;
+}
+.left__circle i:nth-child(3),
+.right__circle i:nth-child(3){
+    animation-delay: 0.6s;
+}
+.left__circle i:nth-child(4),
+.right__circle i:nth-child(4){
+    animation-delay: 0.9s;
+}
+.left__circle i:nth-child(5),
+.right__circle i:nth-child(5){
+    animation-delay: 1.2s;
+}
+.left__circle i:nth-child(6),
+.right__circle i:nth-child(6){
+    animation-delay: 1.5s;
+}
+.left__circle i:nth-child(7),
+.right__circle i:nth-child(7){
+    animation-delay: 1.8s;
 }
 
 .right__circle {
@@ -142,10 +188,14 @@ body {
 .myValue{
     border-start-start-radius: 5px;
     border-end-start-radius: 5px;
+    border-start-end-radius: 2.5px;
+    border-end-end-radius: 2.5px;
 }
 .maxValue{
     border-start-end-radius: 5px;
     border-end-end-radius: 5px;
+    border-start-start-radius: 2.5px;
+    border-end-start-radius: 2.5px;
 }
 
 .game__container-center {
@@ -153,6 +203,9 @@ body {
 }
 
 .game__container-center-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 75%;
     margin-top: 1.5rem;
@@ -429,6 +482,26 @@ body {
     justify-content: space-between;
 }
 
+.count-down {
+    color: yellow;
+    padding: 30px ;
+    font-family: 'Pacifico', cursive;
+    top: 50%;
+    right: 50%;
+    font-size: 3rem;
+    font-weight: 600;
+    animation: time 1s infinite;
+    display: none;
+}
+
+@keyframes time {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 .game__container-center-bottom-item1 {
     width: 39%;
     margin-left: 0.5rem;
@@ -526,13 +599,33 @@ body {
     width: 40%;
     height: 70%;
     background-color: #fff;
-    border-radius: 8px;
+    border-start-start-radius: 5px;
+    border-end-start-radius: 5px;
+    border-start-end-radius: 2.5px;
+    border-end-end-radius: 2.5px;    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.box-maxamount-item {
+    width: 40%;
+    height: 70%;
+    background-color: #fff;
+    border-start-end-radius: 5px;
+    border-end-end-radius: 5px;
+    border-start-start-radius: 2.5px;
+    border-end-start-radius: 2.5px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
 .box-amount-item span {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: orange;
+    margin-right: 4px;
+}
+.box-maxamount-item span {
     font-weight: 600;
     font-size: 1.5rem;
     color: orange;
