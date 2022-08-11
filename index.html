@@ -4,33 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Game</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/b053ab4793.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <section class="container">
         <section class="game">
+            <div class="menuBoard">
+              <div class="menuTop">
+                <div class="menuTopLeft">
+                  <img class="soundBtn" src="./assets/images/menu-board/sound.png" alt="">
+                  <img class="victoryBtn" src="./assets/images/menu-board/victory.png" alt="">
+                  <img class="settingBtn" src="./assets/images/menu-board/setting.png" alt=""> 
+                </div>
+                <div class="menuTopRight">
+                  <div class="profile">
+                    <div class="nameAndLevel">
+                      <p class="profileName">Name</p>
+                      <div class="levelLine">
+                        <div class="currentLevel"></div>
+                      </div>
+                    </div>
+                    <img class="personIcon" src="./assets/images/menu-board/person icon.png" alt="">
+                  </div>
+                  <div class="coinBox">
+                    <img src="./assets/images/btn/coin1.png" alt="">
+                    <p>10,000</p>
+                  </div>
+                </div>
+              </div>
+              <img class="menuPlayBtn" src="./assets/images/menu-board/play.png" alt="">
+              <img class="menuQuitBtn" src="./assets/images/menu-board/quit.png" alt="">
+            </div>
             <div class="game__container">
                 <div class="game__container-left">
                     <div class="leftSideBoxContainer">
                         <div class="box">
                             <div class="btnGroup">
-                                <img class="animalCircleImg" src="./assets/images/round-buttons/dog.png" id="dog">
-                                <div class="reduceBtn" id="dog-redu"><i class="fa-solid fa-caret-down"></i></div>
+                                <img class="animalCircleImg" src="./assets/images/round-buttons/dog.png" alt="">
+                                <!-- <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div> -->
                             </div>
                             <div class="amountField">
-                                <section class="myValue"><span class="dog-ammount">0</span></section>
+                                <section class="myValue"><span>0</span></section>
                                 <section class="maxValue"><span>50</span></section>
                             </div>
                         </div>
                         <div class="box">
                             <div class="btnGroup">
-                                <img class="animalCircleImg" src="./assets/images/round-buttons/elephant.png" id="elephant">
-                                <div class="reduceBtn" id="elephant-redu"><i class="fa-solid fa-caret-down"></i></div>
+                                <img class="animalCircleImg" src="./assets/images/round-buttons/elephant.png" alt="">
+                                <!-- <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div> -->
                             </div>
                             <div class="amountField">
                                 <section class="myValue"><span>0</span></section>
@@ -40,7 +67,7 @@
                         <div class="box">
                             <div class="btnGroup">
                                 <img class="animalCircleImg" src="./assets/images/round-buttons/sheep.png" alt="">
-                                <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
+                                <!-- <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div> -->
                             </div>
                             <div class="amountField">
                                 <section class="myValue"><span>0</span></section>
@@ -50,7 +77,7 @@
                         <div class="box">
                             <div class="btnGroup">
                                 <img class="animalCircleImg" src="./assets/images/round-buttons/monkey.png" alt="">
-                                <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
+                                <!-- <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div> -->
                             </div>
                             <div class="amountField">
                                 <section class="myValue"><span>0</span></section>
@@ -63,7 +90,7 @@
                         <div class="box">
                             <div class="btnGroup">
                                 <img class="animalCircleImg" src="./assets/images/round-buttons/jellyfish.png" alt="">
-                                <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
+                                <!-- <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div> -->
                             </div>
                             <div class="amountField">
                                 <section class="myValue"><span>0</span></section>
@@ -73,7 +100,7 @@
                         <div class="box">
                             <div class="btnGroup">
                                 <img class="animalCircleImg" src="./assets/images/round-buttons/shark.png" alt="">
-                                <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
+                                <!-- <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div> -->
                             </div>
                             <div class="amountField">
                                 <section class="myValue"><span>0</span></section>
@@ -83,7 +110,7 @@
                         <div class="box">
                             <div class="btnGroup">
                                 <img class="animalCircleImg" src="./assets/images/round-buttons/seahorse.png" alt="">
-                                <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
+                                <!-- <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div> -->
                             </div>
                             <div class="amountField">
                                 <section class="myValue"><span>0</span></section>
@@ -93,7 +120,7 @@
                         <div class="box">
                             <div class="btnGroup">
                                 <img class="animalCircleImg" src="./assets/images/round-buttons/dolphin.png" alt="">
-                                <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
+                                <!-- <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div> -->
                             </div>
                             <div class="amountField">
                                 <section class="myValue"><span>0</span></section>
@@ -104,95 +131,281 @@
                 </div>
                 <div class="game__container-center">
                     <div class="game__container-center-top">
-                        <img src="./assets/images/square-buttons/tortoise(top corner).png"
-                         alt="tortoise(top corner)" class="img1">
-                        <img src="./assets/images/square-buttons/dog(top corner).png" 
-                         alt="buttons/dog(top corner)" class="img2">
-                        <img src="./assets/images/square-buttons/dog(top corner).png" 
-                         alt="buttons/dog(top corner)" class="img3">
-                        <img src="./assets/images/square-buttons/dog(top corner).png" 
-                         alt="buttons/dog(top corner)" class="img4">
-                        <img src="./assets/images/square-buttons/whale(top corner).png"
-                          alt="whale(top corner)" class="img5">
-                        <img src="./assets/images/square-buttons/jellyfish(top corner).png"
-                           alt="jellyfish(top corner)" class="img6">
-                        <img src="./assets/images/square-buttons/jellyfish(top corner).png"
-                           alt="jellyfish(top corner)" class="img7">
-                        <img src="./assets/images/square-buttons/jellyfish(top corner).png"
-                           alt="jellyfish(top corner)" class="img8">
-                        <img src="./assets/images/square-buttons/tortoise(top corner).png" 
-                        alt="tortoise(top corner)" class="img9">
-                        <img src="./assets/images/square-buttons/shark(right side).png" 
-                        alt="shark(right side)" class="img10"> 
-                        <img src="./assets/images/square-buttons/shark(right side).png" 
-                        alt="shark(right side)" class="img11">   
-                        <img src="./assets/images/square-buttons/shark(right side).png" 
-                        alt="shark(right side)" class="img12"> 
-                        <img src="./assets/images/square-buttons/whale(right side).png" 
-                        alt="whale(right side).png" class="img13">
-                        <img src="./assets/images/square-buttons/seahorse(right side).png" 
-                        alt="seahorse(right side).png" class="img14">
-                        <img src="./assets/images/square-buttons/seahorse(right side).png" 
-                        alt="seahorse(right side).png" class="img15">
-                        <img src="./assets/images/square-buttons/seahorse(right side).png" 
-                        alt="seahorse(right side).png" class="img16">
-                        <img src="./assets/images/square-buttons/tortoise(top corner).png"
-                         alt="tortoise(top corner)" class="img17">
-                         <img src="./assets/images/square-buttons/dolphin(bottom).png" 
-                         alt="dolphin(bottom).png" class="img18">
-                         <img src="./assets/images/square-buttons/dolphin(bottom).png" 
-                         alt="dolphin(bottom).png" class="img19">
-                         <img src="./assets/images/square-buttons/dolphin(bottom).png" 
-                         alt="dolphin(bottom).png" class="img20">
-                         <img src="./assets/images/square-buttons/whale(top corner).png" 
-                         alt="whale(top corner).png" class="img21">
-                         <img src="./assets/images/square-buttons/elephant(bottom).png" 
-                         alt="elephant(bottom).png" class="img22">
-                         <img src="./assets/images/square-buttons/elephant(bottom).png" 
-                         alt="elephant(bottom).png" class="img23">
-                         <img src="./assets/images/square-buttons/elephant(bottom).png" 
-                         alt="elephant(bottom).png" class="img24">
-                         <img src="./assets/images/square-buttons/tortoise(bottom).png" 
-                         alt="tortoise(bottom).png" class="img25">
-                         <img src="./assets/images/square-buttons/sheep(left side).png" 
-                         alt="sheep(left side).png" class="img26">
-                         <img src="./assets/images/square-buttons/sheep(left side).png" 
-                         alt="sheep(left side).png" class="img27">
-                         <img src="./assets/images/square-buttons/sheep(left side).png" 
-                         alt="sheep(left side).png" class="img28">
-                         <img src="./assets/images/square-buttons/whale(top corner).png" 
-                         alt="" class="img29">
-                         <img src="./assets/images/square-buttons/monkey(left side).png" 
-                         alt="monkey(left side).png" class="img30">
-                         <img src="./assets/images/square-buttons/monkey(left side).png" 
-                         alt="monkey(left side).png" class="img31">
-                         <img src="./assets/images/square-buttons/monkey(left side).png" 
-                         alt="monkey(left side).png" class="img32">
-                        <div style="display:none ;" class="count-down">
-                            
-                        </div>
+                        <div class="img1">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/tortoise(top corner).png"
+                                alt="tortoise(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img2">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/dog(top corner).png"
+                                alt="buttons/dog(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img3">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/dog(top corner).png"
+                                alt="buttons/dog(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img4">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/dog(top corner).png"
+                                alt="buttons/dog(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img5">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/whale(top corner).png"
+                                alt="whale(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img6">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/jellyfish(top corner).png"
+                                alt="jellyfish(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img7">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/jellyfish(top corner).png"
+                                alt="jellyfish(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img8">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/jellyfish(top corner).png"
+                                alt="jellyfish(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img9">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/tortoise(top corner).png"
+                                alt="tortoise(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img10">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/shark(right side).png"
+                                alt="shark(right side)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img11">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/shark(right side).png"
+                                alt="shark(right side)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img12">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/shark(right side).png"
+                                alt="shark(right side)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img13">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/whale(right side).png"
+                                alt="whale(right side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img14">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/seahorse(right side).png"
+                                alt="seahorse(right side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img15">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/seahorse(right side).png"
+                                alt="seahorse(right side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img16">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/seahorse(right side).png"
+                                alt="seahorse(right side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img17">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/tortoise(top corner).png"
+                                alt="tortoise(top corner)"
+                              />
+                            </div>
+                          </div>
+                          <div class="img18">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/dolphin(bottom).png"
+                                alt="dolphin(bottom).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img19">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/dolphin(bottom).png"
+                                alt="dolphin(bottom).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img20">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/dolphin(bottom).png"
+                                alt="dolphin(bottom).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img21">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/whale(top corner).png"
+                                alt="whale(top corner).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img22">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/elephant(bottom).png"
+                                alt="elephant(bottom).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img23">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/elephant(bottom).png"
+                                alt="elephant(bottom).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img24">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/elephant(bottom).png"
+                                alt="elephant(bottom).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img25">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/tortoise(bottom).png"
+                                alt="tortoise(bottom).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img26">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/sheep(left side).png"
+                                alt="sheep(left side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img27">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/sheep(left side).png"
+                                alt="sheep(left side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img28">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/sheep(left side).png"
+                                alt="sheep(left side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img29">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/whale(top corner).png"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="img30">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/monkey(left side).png"
+                                alt="monkey(left side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img31">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/monkey(left side).png"
+                                alt="monkey(left side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="img32">
+                            <div class="img">
+                              <img
+                                src="./assets/images/square-buttons/monkey(left side).png"
+                                alt="monkey(left side).png"
+                              />
+                            </div>
+                          </div>
+                          <div class="time">
+                            <div class="circle">
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70" id="ss"></circle>
+                                </svg>
+                                <div class="countDown"></div>
+                            </div>
+                        </div>  
                     </div>
                     <div class="game__container-center-bottom">
-                        <div class="game__container-center-bottom-item1">
-                            <p>
-                                JACKPOT
-                            </p>
-                            <span>
-                                1,500,000
-                            </span>
-                                
-                        </div>
+                        <div class="game__container-center-bottom-item1"><p>JACKPOT</p><span>1,500,000</span></div>
                         <div class="game__container-center-bottom-item2">
                             <p>WIN</p>
-                            <div class="game__container-center-bottom-item2-price">
-                                <span>0</span>
-                            </div>
+                            <div class="game__container-center-bottom-item2-price"><span>0</span></div>
                         </div>
                         <div class="game__container-center-bottom-item2">
                             <p>COIN</p>
-                            <div class="game__container-center-bottom-item2-price">
-                                <span class="myOwnCoin">600</span>
-                            </div>
+                            <div class="myOwnCoin game__container-center-bottom-item2-price"><span>600</span></div>
                         </div>
                     </div>
                 </div>
@@ -200,41 +413,41 @@
                     <div class="box">
                         <img class="animalCircleImg" src="./assets/images/round-buttons/tortoise.png" alt="">
                         <div class="box-amount">
-                            <section class="box-amount-item myValue"><span>0</span></section>
-                            <section class="box-maxamount-item maxValue"><span>50</span></section>
+                            <section class="myValue box-amount-item"><span>0</span></section>
+                            <section class="maxValue box-amount-item-max"><span>50</span></section>
                         </div>
-                        <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
+                        <!-- <div class="reduceBtn reduceBtn2"><i class="fa-solid fa-caret-down"></i></div> -->
                     </div>
                     <div class="box">
                         <img class="animalCircleImg" src="./assets/images/round-buttons/whale.png" alt="">
                         <div class="box-amount">
-                            <section class="box-amount-item myValue"><span>0</span></section>
-                            <section class="box-maxamount-item maxValue"><span>50</span></section>
+                            <section class="myValue box-amount-item"><span>0</span></section>
+                            <section class="maxValue box-amount-item-max"><span>50</span></section>
                         </div>
-                        <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
-                    </div>
-                    <div class="box">
-                        <img class="animalCircleImg" src="./assets/images/round-buttons/land.png" alt="">
-                        <div class="box-amount">
-                            <section class="box-amount-item myValue  "><span>0</span></section>
-                            <section class="box-maxamount-item maxValue"><span>50</span></section>
-                        </div>
-                        <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
+                        <!-- <div class="reduceBtn reduceBtn2"><i class="fa-solid fa-caret-down"></i></div> -->
                     </div>
                     <div class="box">
                         <img class="animalCircleImg" src="./assets/images/round-buttons/sea.png" alt="">
                         <div class="box-amount">
-                            <section class="box-amount-item myValue "><span>0</span></section>
-                            <section class="box-maxamount-item maxValue "><span>50</span></section>
+                            <section class="myValue box-amount-item"><span>0</span></section>
+                            <section class="maxValue box-amount-item-max"><span>50</span></section>
                         </div>
-                        <div class="reduceBtn"><i class="fa-solid fa-caret-down"></i></div>
+                        <!-- <div class="reduceBtn reduceBtn2"><i class="fa-solid fa-caret-down"></i></div> -->
+                    </div>
+                    <div class="box">
+                        <img class="animalCircleImg" src="./assets/images/round-buttons/land.png" alt="">
+                        <div class="box-amount">
+                            <section class="myValue box-amount-item"><span>0</span></section>
+                            <section class="maxValue box-amount-item-max"><span>50</span></section>
+                        </div>
+                        <!-- <div class="reduceBtn reduceBtn2"><i class="fa-solid fa-caret-down"></i></div> -->
                     </div>
                     <div class="btn-box">   
-                        <img class="rotate" src="./assets/images/btn/rotate.png" alt="" id="refresh">
+                        <img class="restartBtn" src="./assets/images/btn/rotate.png" alt="">
                     </div>
                     <div class="btn">
-                        <img src="./assets/images/btn/play.png" alt="" class=" start-btn image1 ">
-                        <img src="./assets/images/btn/cross.png" alt="" class="stop-btn">
+                        <img class="startBtn" src="./assets/images/btn/play.png" alt="">
+                        <img class="removeBetBtn" src="./assets/images/btn/cross.png" alt="">
                     </div>
                     <div class="get-coin">
                         <img src="./assets/images/btn/coin1.png" alt="">
@@ -262,12 +475,32 @@
             <i class="fa-solid fa-circle"></i>
         </div>
     </section>
-    <audio style="display:none ;"
-    controls
-    src="./assets/audios/JapanLifeMainfile.wav" id="audioTimer">
-        Your browser does not support the
-        <code>audio</code> element.
-</audio>
+
+    <audio controls
+           src="./assets/audio/ClockTick.wav"
+           class="clockTickAudio">
+              Your browser does not support the
+              <code>audio</code> element.
+    </audio>
+    <audio controls
+    src="./assets/audio/CoinDrop.wav"
+    class="coinDropAudio">
+       Your browser does not support the
+       <code>audio</code> element.
+    </audio>
+    <audio controls
+    src="./assets/audio/backgroundSound.wav"
+    class="backgroundSound">
+       Your browser does not support the
+       <code>audio</code> element.
+    </audio>
+    <audio controls
+    src="./assets/audio/BubbleClick.mov"
+    class="bubbleClick">
+       Your browser does not support the
+       <code>audio</code> element.
+    </audio>
+
     <script async src="./index.js"></script>
 </body>
 </html>
