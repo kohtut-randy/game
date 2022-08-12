@@ -83,7 +83,7 @@ settingBtn.addEventListener("click", function(){
     playBubbleSound();
 })
 
-let count = 30;
+let count = 15;
 let timerId = 0;
 let betPermission = false;
 

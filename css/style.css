@@ -603,6 +603,7 @@ body {
 .animate::after {
     content: '';
     background-image: linear-gradient(to bottom, #ffe600, #ff7b01);
+    /* border: 2px solid red; */
     background-size: contain;
     opacity: 0.7;
     width: 100%;
