@@ -5,6 +5,8 @@ const menuQuitBtn = document.querySelector(".menuQuitBtn");
 const soundBtn = document.querySelector(".soundBtn");
 const victoryBtn = document.querySelector(".victoryBtn");
 const settingBtn = document.querySelector(".settingBtn");
+const loadingBox = document.querySelector(".loadingBox");
+const backToMenuBtn = document.querySelector(".backToMenuBtn");
 const betBtn = document.querySelectorAll(".animalCircleImg");
 // const reduceBtn = document.querySelectorAll(".reduceBtn");
 const myValue = document.querySelectorAll(".myValue");
@@ -12,6 +14,7 @@ console.log(myValue);
 const maxValue = document.querySelectorAll(".maxValue");
 const centerImg = document.querySelectorAll(".img");
 console.log(centerImg);
+const winCount = document.querySelector(".winCount");
 const myOwnCoin = document.querySelector(".myOwnCoin");
 const circle = document.querySelector(".circle");
 let ss = document.getElementById("ss");
@@ -42,14 +45,13 @@ const removeBetBtn = document.querySelector(".removeBetBtn");
             }
         })
     }
- 
-// amountIncrease();
 
 function playClockTick(){
     clockTickAudio.play();
 }
 function endClockTick(){
     clockTickAudio.pause();
+    clockTickAudio.currentTime = 0;
 }
 
 function playCoinDrop(){
@@ -60,6 +62,7 @@ function playBackgroundSound(){
 }
 function stopBackgroundSound(){
     backgroundSound.pause();
+    backgroundSound.currentTime = 0;
 }
 function playBubbleSound(){
     bubbleClickSound.play();
@@ -67,8 +70,13 @@ function playBubbleSound(){
 
 menuPlayBtn.addEventListener("click",function(){
     playBubbleSound();
-    gameContainer.style.display = "flex";
-    menuBoard.style.display = "none";
+    loadingBox.style.display = "flex";
+    setTimeout (()=>{
+        // backToMenuBtn.style.display = "flex";
+        gameContainer.style.display = "flex";
+        menuBoard.style.display = "none";
+        loadingBox.style.display = "none";
+    },5000) 
 })
 menuQuitBtn.addEventListener("click", function(){
     playBubbleSound();
@@ -83,7 +91,22 @@ settingBtn.addEventListener("click", function(){
     playBubbleSound();
 })
 
-let count = 15;
+// backToMenuBtn.addEventListener("click", function(){
+//     playBubbleSound();
+//     gameContainer.style.display = "none";
+//     menuBoard.style.display = "flex";
+//     backToMenuBtn.style.display = "none";
+//     for(let i = 0; i < betBtn.length; i++){
+//         myOwnCoin.firstChild.textContent = +myOwnCoin.firstChild.textContent + +myValue[i].firstChild.textContent;
+//     };
+//     for(let i = 0; i < betBtn.length; i++){
+//         myValue[i].firstChild.textContent = 0;
+//     };
+//     countingEnd();
+//     stopBackgroundSound();
+// })
+
+let count = 10;
 let timerId = 0;
 let betPermission = false;
 
@@ -98,6 +121,12 @@ startBtn.addEventListener("click", function(){
         let s = count
         s = (s <10)? "0" + s : s;
         countDown.innerHTML = s;
+
+        if(betPermission == false){
+            preAmount = myOwnCoin.firstChild.textContent;
+        }
+        console.log("pre amount", preAmount);
+
         betPermission = true;
         if(count > 0 && count <= 5){
             stopBackgroundSound();
@@ -123,7 +152,7 @@ startBtn.addEventListener("click", function(){
 function countingEnd(){
     clearInterval(timerId);
     timerId = 0;
-    count = 30;
+    count = 10;
     countDown.innerHTML = count;
     endClockTick()
     circle.style.display = "none"
@@ -192,11 +221,22 @@ function check(x){
     }
     if(x == 5 || x == 6 || x == 7 || x == 9 || x == 10 || x == 11 || x == 13 || x == 14 || x == 15 || x == 17 || x == 18 || x == 19 || x == 0 || x == 8 || x == 16 || x == 24 || x == 4 || x == 12 || x == 20 || x == 28){
         myOwnCoin.firstChild.textContent = +myOwnCoin.firstChild.textContent + (+myValue[10].firstChild.textContent * 2);
-        console.log(myOwnCoin.firstChild.textContent);
     }
     if(x == 1 || x == 2 || x == 3 || x == 21 || x == 22 || x == 23 || x == 25 || x == 26 || x == 27 || x == 29 || x == 30 || x == 31){
         myOwnCoin.firstChild.textContent = +myOwnCoin.firstChild.textContent + (+myValue[11].firstChild.textContent * 2);
-        console.log(myOwnCoin.firstChild.textContent);
+    }
+    finalAmount = myOwnCoin.firstChild.textContent;
+    console.log("finalAmount",finalAmount);
+}
+
+function winOrLose(x,y){
+    if(x > y){
+        winCount.firstChild.textContent = +winCount.firstChild.textContent + 1;
+        alert("You Win");
+    }else if(x === y){
+        alert("Draw");
+    }else{
+        alert("You Lose");
     }
 }
 
@@ -235,6 +275,10 @@ function  animationCircle(){
             for(let i = 0; i < betBtn.length; i++){
                 myValue[i].firstChild.textContent = 0;
             }
+
+            setTimeout (()=>{
+                winOrLose(finalAmount,preAmount);
+            },1000) 
         }
         playBubbleSound();
     }, 100);
