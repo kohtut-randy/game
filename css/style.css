@@ -724,7 +724,7 @@ body {
 }
 
 .circle svg circle:nth-child(2) {
-    stroke: orange;
+    stroke: green;
     stroke-dasharray: 440;
 }
 

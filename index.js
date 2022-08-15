@@ -106,7 +106,7 @@ settingBtn.addEventListener("click", function(){
 //     stopBackgroundSound();
 // })
 
-let count = 10;
+let count = 15;
 let timerId = 0;
 let betPermission = false;
 
